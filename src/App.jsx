@@ -1,11 +1,10 @@
 import "./App.css";
 
+import AppRouter from "./Routers/AppRouter";
+
 function App() {
    return (
-      <>
-      <Header/>
-         <h1 className="w-full flex text-red-700">Hello world</h1>
-      </>
+      <AppRouter/>
    );
 }
 
