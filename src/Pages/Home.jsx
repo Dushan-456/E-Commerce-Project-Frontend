@@ -1,11 +1,12 @@
 import React from 'react'
 import Ads from '../Components/ads/ads'
+import Products from '../Components/Products/Products'
 
 const Home = () => {
   return (
     <div>
       <Ads/>
-      <h1>Home page</h1>
+      <Products/>
     </div>
   )
 }
