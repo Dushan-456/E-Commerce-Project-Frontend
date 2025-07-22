@@ -6,6 +6,7 @@ header{
 }
 .search{
     background-color: white;
+    border: 1px solid black;
     border-radius: 25px;
     height: 40px;
     width: 50%;
@@ -16,4 +17,10 @@ header{
 }
 .search input {
     width: 100%;
+}
+.bottom-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
 }
