@@ -1,8 +1,8 @@
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate, Outlet } from "react-router-dom";
 
 const UserProtectedRouter = () => {
-    const user = true ;
-  return user? <Outlet/>:<Navigate to='/login'/>
-}
+   const user = true;
+   return user ? <Outlet /> : <Navigate to="/login" />;
+};
 
-export default UserProtectedRouter
+export default UserProtectedRouter;
