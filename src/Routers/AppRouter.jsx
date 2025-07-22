@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom"
 import MainLayout from "../Layout/MainLayout"
 import Home from "../Pages/Home"
 import About from "../Pages/About"
@@ -6,21 +6,55 @@ import UserProfile from "../Pages/UserProfile"
 import LoginPage from "../Pages/Login/LoginPage"
 import UserProtectedRouter from "./UserProtectedRouter"
 
+
+
+const router = createBrowserRouter([
+    {
+        path:'/',
+        element:<MainLayout/>,
+        children:[
+            {
+                index:true,
+                element:<Home/>
+            },
+            {
+                path:'about',
+                element:<About/>
+            },
+            {
+                element:<UserProtectedRouter/>,
+                children:[
+                    {
+                        path:'profile',
+                        element:<UserProfile/>
+
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        path:'/login',
+        element:<LoginPage/>
+    }
+])
+
 const AppRouter = () => {
-  return (
-    <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<MainLayout/>}>
-            <Route index element={<Home/>}/>
-            <Route path="about" element={<About/>}/>
-            <Route element={<UserProtectedRouter/>}>
-                <Route path="profile" element={<UserProfile/>}/>
-            </Route>
-        </Route>
-            <Route path="login" element={<LoginPage/>}/>
-    </Routes>
+  return (<RouterProvider router={router}/>
+
+    // <BrowserRouter>
+    // <Routes>
+    //     <Route path="/" element={<MainLayout/>}>
+    //         <Route index element={<Home/>}/>
+    //         <Route path="about" element={<About/>}/>
+    //         <Route element={<UserProtectedRouter/>}>
+    //             <Route path="profile" element={<UserProfile/>}/>
+    //         </Route>
+    //     </Route>
+    //         <Route path="/login" element={<LoginPage/>}/>
+    // </Routes>
       
-    </BrowserRouter>
+    // </BrowserRouter>
   )
 }
 
