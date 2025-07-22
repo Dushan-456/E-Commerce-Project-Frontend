@@ -1,0 +1,19 @@
+header{
+    color: black;
+}
+.logo{
+    width: 200px;
+}
+.search{
+    background-color: white;
+    border-radius: 25px;
+    height: 40px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.search input {
+    width: 100%;
+}
