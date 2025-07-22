@@ -1,0 +1,25 @@
+.navmenu .active {
+   color: red;
+}
+.navmenu a.pending {
+   color: blue;
+}
+.navmenu a.transitioning {
+   view-transition-name: my-transition;
+}
+
+.navmenu a {
+   font-size: 1.2em;
+   font-weight: 400;
+   border-radius: 20px;
+   padding: 5px 20px;
+   transition: 0.3s;
+}
+.navmenu a:hover {
+   background-color: aqua;
+   transition: 0.3s;
+}
+.navmenu {
+   display: flex;
+   gap: 20px;
+}
