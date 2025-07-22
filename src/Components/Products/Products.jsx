@@ -102,7 +102,7 @@ const sampleproducts = [
 ];
 
 // import required modules
-import { Grid } from "swiper/modules";
+import { Grid, Mousewheel } from "swiper/modules";
 
 const Products = () => {
    return (
@@ -117,7 +117,8 @@ const Products = () => {
             pagination={{
                clickable: false,
             }}
-            modules={[Grid]}>
+            mousewheel={true}
+            modules={[Grid , Mousewheel]}>
          {sampleproducts.map(
             ({
                ProductImgURL,
