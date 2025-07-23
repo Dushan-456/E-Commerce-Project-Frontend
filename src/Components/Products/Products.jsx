@@ -1,12 +1,10 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Rating from "@mui/material/Rating";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import "./Products.css";
 
 const sampleproducts = [
    {
@@ -103,6 +101,7 @@ const sampleproducts = [
 
 // import required modules
 import { Grid, Mousewheel } from "swiper/modules";
+import ProductItem from "./ProductItem";
 
 const Products = ({topic,rows,slidesPerView}) => {
    return (
@@ -148,39 +147,39 @@ const Products = ({topic,rows,slidesPerView}) => {
 
 export default Products;
 
-const ProductItem = ({
-   ProductImgURL,
-   ProductTitle,
-   Price,
-   Discount,
-   ratings,
-   itemSold,
-}) => (
-   <div className="product-card">
-      <img className="product-img" src={ProductImgURL} alt={ProductTitle}  style={{
-    width: '250px',
-    height: '250px',
-    objectFit: 'cover',
-    borderRadius: '8px',
-  }}/>
-      <p className="product-title w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">{ProductTitle}</p>
-      <p className="price">
-         <span className="currency">LKR </span>
-         {(Price * (100 - Discount)) / 100}.00{" "}
-         <span className="old-price">{Price}.00</span>
-         <span className="discount"> -{Discount}%</span>
-      </p>
+// const ProductItem = ({
+//    ProductImgURL,
+//    ProductTitle,
+//    Price,
+//    Discount,
+//    ratings,
+//    itemSold,
+// }) => (
+//    <div className="product-card">
+//       <img className="product-img" src={ProductImgURL} alt={ProductTitle}  style={{
+//     width: '250px',
+//     height: '250px',
+//     objectFit: 'cover',
+//     borderRadius: '8px',
+//   }}/>
+//       <p className="product-title w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">{ProductTitle}</p>
+//       <p className="price">
+//          <span className="currency">LKR </span>
+//          {(Price * (100 - Discount)) / 100}.00{" "}
+//          <span className="old-price">{Price}.00</span>
+//          <span className="discount"> -{Discount}%</span>
+//       </p>
 
-      <div>
-         <Rating
-            name="half-rating-read"
-            defaultValue={ratings}
-            precision={0.5}
-            readOnly
-            size="small"
-         />
-         <span className="rate">{ratings}</span>
-         <span className="sold"> | {itemSold}+ sold</span>
-      </div>
-   </div>
-);
+//       <div>
+//          <Rating
+//             name="half-rating-read"
+//             defaultValue={ratings}
+//             precision={0.5}
+//             readOnly
+//             size="small"
+//          />
+//          <span className="rate">{ratings}</span>
+//          <span className="sold"> | {itemSold}+ sold</span>
+//       </div>
+//    </div>
+// );
