@@ -2,7 +2,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Badge from "@mui/material/Badge";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import IconButton from "@mui/material/IconButton";
-
+import  { useState, useEffect } from "react";
 import Logo from "../../assets/Images/e-com_logo.png";
 import "./Header.css";
 import * as React from "react";
@@ -71,10 +71,36 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const Header = () => {
+    const [isShrunk, setIsShrunk] = useState(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsShrunk(true);
+      } else {
+        setIsShrunk(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
    return (
-      <header className="p-3 bg-amber-300">
-         <div className="top-header flex justify-between align-middle">
-            <img src={Logo} alt="Logo" className="logo" />
+      <header
+      className={`sticky top-0 z-50 transition-all duration-300 ease-in-out bg-amber-300 ${
+        isShrunk ? "py-2 shadow-md" : "p-3"
+      }`}
+    >
+         <div
+        className={`top-header flex justify-between items-center transition-all duration-300 ${
+          isShrunk ? "h-14" : "h-20"
+        }`}
+      >
+            <img src={Logo} alt="Logo" className={`logo transition-all duration-300 ${
+            isShrunk ? "w-24" : "w-32"
+          }`} />
 
             <div className="search">
                <input
