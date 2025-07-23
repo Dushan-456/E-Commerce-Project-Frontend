@@ -89,10 +89,12 @@ const Header = () => {
 
    return (
       <header
-      className={`sticky top-0 z-50 transition-all duration-300 ease-in-out bg-amber-300 ${
+      className={`sticky  top-0 z-50 transition-all duration-300 ease-in-out ${
         isShrunk ? "py-2 shadow-md" : "p-3"
       }`}
     >
+      <div className="w-7xl m-auto"> 
+
          <div
         className={`top-header flex justify-between items-center transition-all duration-300 ${
           isShrunk ? "h-14" : "h-20"
@@ -119,11 +121,12 @@ const Header = () => {
 
             <div className="cart">
                <IconButton
+               style={{ boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
                   size="large"
                   aria-label="show 4 new mails"
                   color="inherit">
                   <Badge badgeContent={4} color="error">
-                     <LocalMallIcon />
+                     <LocalMallIcon style={{ fontSize: "32px" }}/>
                   </Badge>
                </IconButton>
             </div>
@@ -136,6 +139,7 @@ const Header = () => {
 
             </div>
          </div>
+      </div>
       </header>
    );
 };
