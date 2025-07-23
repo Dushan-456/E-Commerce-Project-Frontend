@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <Ads/>
-      <Products/>
+      <Products topic='Trending Products' rows={1} slidesPerView={7}/>
     </div>
   )
 }
