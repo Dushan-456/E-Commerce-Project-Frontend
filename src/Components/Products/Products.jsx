@@ -12,7 +12,7 @@ const sampleproducts = [
    {
       ProductImgURL:
          "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
-      ProductTitle: "Apple Watch",
+      ProductTitle: "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       Price: 12500,
       Discount: 12,
       ratings: 1.5,
@@ -156,12 +156,17 @@ const ProductItem = ({
    itemSold,
 }) => (
    <div className="product-card">
-      <img className="product-img" src={ProductImgURL} alt={ProductTitle} />
-      <p className="product-title">{ProductTitle}</p>
+      <img className="product-img" src={ProductImgURL} alt={ProductTitle}  style={{
+    width: '250px',
+    height: '250px',
+    objectFit: 'cover',
+    borderRadius: '8px',
+  }}/>
+      <p className="product-title w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">{ProductTitle}</p>
       <p className="price">
          <span className="currency">LKR </span>
          {(Price * (100 - Discount)) / 100}.00{" "}
-         <span className="old-price">LKR {Price}.00</span>
+         <span className="old-price">{Price}.00</span>
          <span className="discount"> -{Discount}%</span>
       </p>
 
