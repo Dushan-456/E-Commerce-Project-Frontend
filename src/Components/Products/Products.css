@@ -36,3 +36,8 @@
     width: 250;
     height: 250;
 }
+.products-topic{
+   font-size: 2em;
+   text-align: center;
+   font-weight: bold;
+}
