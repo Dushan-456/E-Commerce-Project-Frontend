@@ -104,14 +104,15 @@ const sampleproducts = [
 // import required modules
 import { Grid, Mousewheel } from "swiper/modules";
 
-const Products = () => {
+const Products = ({topic,rows,slidesPerView}) => {
    return (
       <section>
+         <h1 className="products-topic" >{topic}</h1>
 
          <Swiper
-            slidesPerView={7}
+            slidesPerView={slidesPerView}
             grid={{
-               rows: 1,
+               rows: rows,
             }}
             spaceBetween={10}
             pagination={{
