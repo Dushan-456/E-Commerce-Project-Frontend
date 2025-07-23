@@ -11,11 +11,13 @@ import About from "../Pages/About";
 import UserProfile from "../Pages/UserProfile";
 import LoginPage from "../Pages/Login/LoginPage";
 import UserProtectedRouter from "./UserProtectedRouter";
+import Error404Page from "../Pages/Error404Page";
 
 const router = createBrowserRouter([
    {
       path: "/",
       element: <MainLayout />,
+      errorElement: <Error404Page />,
       children: [
          {
             index: true,
