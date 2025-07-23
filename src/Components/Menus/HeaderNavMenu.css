@@ -16,7 +16,7 @@
    transition: 0.3s;
 }
 .navmenu a:hover {
-   background-color: aqua;
+   background-color: rgb(241, 241, 241);
    transition: 0.3s;
 }
 .navmenu {
