@@ -4,7 +4,7 @@ import "./Product.css";
 
 const Product = () => {
    return (
-      <div className="w-7xl m-auto">
+      <div className="w-7xl m-auto pt-10">
          <div className="section1 mt-3 flex ">
             <div className="flex-3/4">
                <div className=" flex mb-5">
@@ -20,7 +20,7 @@ const Product = () => {
                   <h1>reviews</h1>
                </div>
             </div>
-            <div className="  flex-1/4">
+            <div className="pt-9  flex-1/4">
             <div className=" h-78 sticky top-35 rounded-xl" style={{boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px'}}><h1>buy</h1></div>
             </div>
          </div>
