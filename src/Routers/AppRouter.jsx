@@ -12,6 +12,8 @@ import UserProfile from "../Pages/UserProfile";
 import LoginPage from "../Pages/Login/LoginPage";
 import UserProtectedRouter from "./UserProtectedRouter";
 import Error404Page from "../Pages/Error404Page";
+import CategoryItems from "../Pages/CategoryItems";
+import Product from "../Pages/Product";
 
 const router = createBrowserRouter([
    {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
          {
             path: "about",
             element: <About />,
+         },
+         {
+            path: "category/:CategoryID",
+            element: <CategoryItems />,
+         },
+         {
+            path: "product/:ProductID",
+            element: <Product />,
          },
          {
             element: <UserProtectedRouter />,
