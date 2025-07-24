@@ -12,7 +12,7 @@ const ProductItem = ({   ProductID,ProductImgURL,   ProductTitle,   Price,   Dis
     objectFit: 'cover',
     borderRadius: '8px',
   }}/>
-      <p className="product-title w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">{ProductTitle}</p>
+      <p className="title w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">{ProductTitle}</p>
       <p className="price">
          <span className="currency">LKR </span>
          {(Price * (100 - Discount)) / 100}.00{" "}
