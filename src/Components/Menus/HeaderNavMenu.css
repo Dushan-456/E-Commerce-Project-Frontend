@@ -8,14 +8,14 @@
    view-transition-name: my-transition;
 }
 
-.navmenu a {
-   font-size: 1.2em;
-   font-weight: 400;
-   border-radius: 20px;
-   padding: 5px 20px;
-   transition: 0.3s;
+.nav-link {
+   font-size: 1.2em !important;
+   font-weight: 400 !important;
+   border-radius: 20px !important;
+   padding: 5px 20px !important;
+   transition: 0.3s !important;
 }
-.navmenu a:hover {
+.nav-link:hover {
    background-color: rgb(241, 241, 241);
    transition: 0.3s;
 }
