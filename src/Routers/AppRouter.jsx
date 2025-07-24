@@ -13,13 +13,13 @@ import LoginPage from "../Pages/Login/LoginPage";
 import UserProtectedRouter from "./UserProtectedRouter";
 import Error404Page from "../Pages/Error404Page";
 import CategoryItems from "../Pages/CategoryItems";
-import Product from "../Pages/Product";
+import Product from "../Pages/Product/Product";
 
 const router = createBrowserRouter([
    {
       path: "/",
       element: <MainLayout />,
-      errorElement: <Error404Page />,
+      // errorElement: <Error404Page />,
       children: [
          {
             index: true,
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
          {
             path: "category/:CategoryID",
             element: <CategoryItems />,
-         },
+         }, 
          {
             path: "product/:ProductID",
             element: <Product />,
