@@ -7,6 +7,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination"; 
 import { Grid, Mousewheel } from "swiper/modules";
 import { Link } from "react-router-dom";
+import IconButton from "@mui/material/IconButton";
 
 
 const categoryitems = [
@@ -209,10 +210,13 @@ export default CategoryItemsRound
 
 const  CategoryItems = ({CategoryID,CategoryImgURL,CategoryTitle})=>(
     <Link to={`/category/${CategoryID}`}>
-    
+
     <div className="flex flex-col items-center justify-center" >
+      <IconButton sx={{margin:'0' , padding:"0"}} >
         <img style={{borderRadius:100, height:90 , width: 90 , objectFit: 'cover'}} src={CategoryImgURL} alt={CategoryTitle} />
+      </IconButton>
     <p className="text-center  leading-[1]"> {CategoryTitle}</p>
     </div>
+    
     </Link>
 )
