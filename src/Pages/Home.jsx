@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react'
 import Ads from '../Components/ads/ads'
-import Products from '../Components/Products/Products'
+import Products from '../Components/Products/ProductsSlider'
 import Loading from '../Components/Loading/Loading'
 import CategoryItemsRound from '../Components/Categories/CategoryItemsRound'
 
