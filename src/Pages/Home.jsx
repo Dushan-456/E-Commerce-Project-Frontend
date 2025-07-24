@@ -25,6 +25,25 @@ const Home = () => {
       <div className='w-7xl m-auto'>
         <CategoryItemsRound/>
       <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
+      <div className='h-screen bg-amber-200'>
+
+      </div>
 
       </div>
     </div>
