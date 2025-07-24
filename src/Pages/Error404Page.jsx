@@ -8,7 +8,7 @@ import { useRouteError } from "react-router-dom";
 const Error404Page = () => {
 
       const navigate = useNavigate();
-        const error = useRouteError();
+        const errormsg = useRouteError();
 
 
   return (
@@ -18,7 +18,7 @@ const Error404Page = () => {
         Go to Home
       </Button>
   <img src={error} alt="404" style={{ width: "50%" }} />
-  <p>{error.statusText}</p>
+  <p>{errormsg.statusText}</p>
 </div>
   )
 }
