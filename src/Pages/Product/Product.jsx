@@ -21,7 +21,7 @@ const Product = () => {
                </div>
             </div>
             <div className="  flex-1/4">
-            <div className="m-7 h-78 sticky top-35 bg-blue-600"><h1>buy</h1></div>
+            <div className=" h-78 sticky top-35 rounded-xl" style={{boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px'}}><h1>buy</h1></div>
             </div>
          </div>
       </div>
