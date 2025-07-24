@@ -6,7 +6,10 @@ const MainLayout = () => {
    return (
       <div className="w-full h-screen">
          <Header />
+         <div className="mt-30">
          <Outlet />
+
+         </div>
          <Footer />
       </div>
    );
