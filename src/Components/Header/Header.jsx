@@ -2,7 +2,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Badge from "@mui/material/Badge";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import IconButton from "@mui/material/IconButton";
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../../assets/Images/e-com_logo.png";
 import "./Header.css";
 import * as React from "react";
@@ -13,6 +13,7 @@ import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import HeaderNavMenu from "../Menus/HeaderNavMenu";
+import { Link } from "react-router-dom";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
    width: 62,
@@ -71,75 +72,78 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const Header = () => {
-    const [isShrunk, setIsShrunk] = useState(false);
+   const [isShrunk, setIsShrunk] = useState(false);
 
-    useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsShrunk(true);
-      } else {
-        setIsShrunk(false);
-      }
-    };
+   useEffect(() => {
+      const handleScroll = () => {
+         if (window.scrollY > 50) {
+            setIsShrunk(true);
+         } else {
+            setIsShrunk(false);
+         }
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+   }, []);
 
    return (
       <header
-      className={`sticky  top-0 z-50 transition-all duration-300 ease-in-out ${
-        isShrunk ? "py-2 shadow-md" : "p-3"
-      }`}
-    >
-      <div className="w-7xl m-auto"> 
-
-         <div
-        className={`top-header flex justify-between items-center transition-all duration-300 ${
-          isShrunk ? "h-14" : "h-20"
-        }`}
-      >
-            <img src={Logo} alt="Logo" className={`logo transition-all duration-300 ${
-            isShrunk ? "w-24" : "w-32"
-          }`} />
-
-            <div className="search">
-               <input
-                  className="outline-none"
-                  type="text"
-                  placeholder="Search"
+         className={`w-screen  top-0 z-50 transition-all duration-300 ease-in-out ${
+            isShrunk ? "py-2 shadow-md" : "p-3"
+         }`}>
+         <div className="w-7xl m-auto">
+            <div
+               className={`top-header flex justify-between items-center transition-all duration-300 ${
+                  isShrunk ? "h-14" : "h-20"
+               }`}>
+                  <Link to='/'>
+                  <IconButton>
+                     
+               <img
+                  src={Logo}
+                  alt="Logo"
+                  className={`logo transition-all duration-300 ${
+                     isShrunk ? "w-35" : "w-40"
+                  }`}
                />
-               <button>
-                  <SearchIcon />
-               </button>
+                  </IconButton>
+                  </Link>
+
+               <div className="search">
+                  <input
+                     className="outline-none"
+                     type="text"
+                     placeholder="Search"
+                  />
+                  <button>
+                     <SearchIcon />
+                  </button>
+               </div>
+
+               <FormControlLabel
+                  control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+               />
+
+               <div className="cart">
+                  <IconButton
+                     style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+                     size="large"
+                     aria-label="show 4 new mails"
+                     color="inherit">
+                     <Badge badgeContent={4} color="error">
+                        <LocalMallIcon style={{ fontSize: "32px" }} />
+                     </Badge>
+                  </IconButton>
+               </div>
             </div>
-
-            <FormControlLabel
-               control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-            />
-
-            <div className="cart">
-               <IconButton
-               style={{ boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px' }}
-                  size="large"
-                  aria-label="show 4 new mails"
-                  color="inherit">
-                  <Badge badgeContent={4} color="error">
-                     <LocalMallIcon style={{ fontSize: "32px" }}/>
-                  </Badge>
-               </IconButton>
+            <div className="bottom-header">
+               <div className="bottom-header-left">
+                  <HeaderNavMenu />
+               </div>
+               <div></div>
             </div>
          </div>
-         <div className="bottom-header">
-            <div className="bottom-header-left"> 
-               <HeaderNavMenu />
-            </div>
-            <div>
-
-            </div>
-         </div>
-      </div>
       </header>
    );
 };
