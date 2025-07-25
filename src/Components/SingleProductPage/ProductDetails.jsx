@@ -25,8 +25,8 @@ const ProductDetails = ({ Price, Discount }) => {
          <div className="flex align-middle">
             <Rating
                name="half-rating-read"
-               defaultValue={3.5}
-               precision={0.5}
+               defaultValue={3.8}
+               precision={0.1}
                readOnly
                size="small"
             />
