@@ -24,7 +24,7 @@ const ProductItem = ({   ProductID,ProductImgURL,   ProductTitle,   Price,   Dis
          <Rating
             name="half-rating-read"
             defaultValue={ratings}
-            precision={0.5}
+            precision={0.1}
             readOnly
             size="small"
          />
