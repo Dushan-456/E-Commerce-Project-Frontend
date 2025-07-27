@@ -10,10 +10,10 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import UserProfile from "../Pages/UserProfile";
 import LoginPage from "../Pages/Login/LoginPage";
-import UserProtectedRouter from "./UserProtectedRouter";
 import Error404Page from "../Pages/Error404Page";
 import CategoryItems from "../Pages/CategoryItems";
 import Product from "../Pages/Product/Product";
+import ProtectedRouter from "./ProtectedRouter";
 
 const router = createBrowserRouter([
    {
@@ -32,19 +32,23 @@ const router = createBrowserRouter([
          {
             path: "category/:CategoryID",
             element: <CategoryItems />,
-         }, 
+         },
          {
             path: "product/:ProductID",
             element: <Product />,
          },
          {
-            element: <UserProtectedRouter />,
+            element: <ProtectedRouter />,
             children: [
                {
                   path: "profile",
                   element: <UserProfile />,
                },
             ],
+         },
+         {
+            path: "*",
+            element: <Error404Page />,
          },
       ],
    },
