@@ -213,7 +213,7 @@ const  CategoryItems = ({CategoryID,CategoryImgURL,CategoryTitle})=>(
 
     <div className="flex flex-col items-center justify-center" >
       <IconButton sx={{margin:'0' , padding:"0"}} >
-        <img style={{borderRadius:100, height:90 , width: 90 , objectFit: 'cover'}} src={CategoryImgURL} alt={CategoryTitle} />
+        <img style={{borderRadius:100,border:'3px solid rgb(0, 119, 255)', padding:'4px' , height:95 , width: 95 , objectFit: 'cover'}} src={CategoryImgURL} alt={CategoryTitle} />
       </IconButton>
     <p className="text-center  leading-[1]"> {CategoryTitle}</p>
     </div>
