@@ -1,4 +1,5 @@
-import error from "../assets/Images/404.webp";
+import errorimg from "../assets/Images/404.webp";
+import { CONTACT_ADMIN_EMAIL } from "../Utils/Values";
 import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
@@ -19,7 +20,7 @@ const Error404Page = () => {
             Sorry ! We couldn't find that page.
          </p>
 
-         <img src={error} alt="404" style={{ width: "45%" }} />
+         <img src={errorimg} alt="Error 404" style={{ width: "45%" }} />
          <Button
             variant="outlined"
             onClick={() => navigate("/")}
@@ -29,7 +30,7 @@ const Error404Page = () => {
          <br />
          <p>
             Please contact{" "}
-            <a href="" className="text-blue-500 font-bold">
+            <a href={CONTACT_ADMIN_EMAIL} className="text-blue-500 font-bold">
                System Administrator
             </a>{" "}
             if you believe this is an error in website.{" "}
