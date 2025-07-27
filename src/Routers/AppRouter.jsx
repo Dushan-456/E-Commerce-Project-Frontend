@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             element: <Product />,
          },
          {
-            element: <ProtectedRouter />,
+            element: <ProtectedRouter ProtectedRole="user"/>,
             children: [
                {
                   path: "profile",
