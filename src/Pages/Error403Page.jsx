@@ -1,26 +1,20 @@
-import errorimg from "../assets/Images/404.webp";
+import { useNavigate } from "react-router-dom";
 import { CONTACT_ADMIN_EMAIL } from "../Utils/Values";
-import Button from "@mui/material/Button";
+import errorimage from "../assets/images/error403.jpg";
 import HomeIcon from "@mui/icons-material/Home";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
-import { useNavigate } from "react-router-dom";
-// import { useRouteError } from "react-router-dom";
+import { Button } from "@mui/material";
 
-const Error404Page = () => {
+const Error403Page = () => {
    const navigate = useNavigate();
-   //  const errormsg = useRouteError();
-
    return (
       <div className="max-w-7xl mx-auto pt-10 text-center flex flex-col items-center pb-10 justify-center">
-         <WarningAmberIcon className="text-amber-500 !text-5xl" />
-         <h1 className="text-2xl font-semibold text-amber-500">
-            Page Not Found.
-         </h1>
+         <WarningAmberIcon className="text-red-600 !text-5xl" />
+         <h1 className="text-2xl font-semibold text-red-600">Access Denied</h1>
          <p className="text-gray-600 mt-2">
-            Sorry ! We couldn't find that page.
+            You do not have permission to view this page.
          </p>
-
-         <img src={errorimg} alt="Error 404" style={{ width: "45%" }} />
+         <img src={errorimage} alt="Error 403" />
          <Button
             variant="outlined"
             onClick={() => navigate("/")}
@@ -35,9 +29,8 @@ const Error404Page = () => {
             </a>{" "}
             if you believe this is an error in website.{" "}
          </p>
-         {/* <p>{errormsg.statusText}</p> */}
       </div>
    );
 };
 
-export default Error404Page;
+export default Error403Page;
