@@ -98,7 +98,7 @@ const Header = () => {
                   isShrunk ? "h-14" : "h-20"
                }`}>
                   <Link to='/'>
-                  <IconButton>
+                  <IconButton style={{borderRadius:'10px'}}>
                      
                <img
                   src={Logo}
