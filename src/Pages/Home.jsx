@@ -1,8 +1,9 @@
 import  { useEffect, useState } from 'react'
 import Ads from '../Components/ads/ads'
-import Products from '../Components/Products/ProductsSlider'
+import ProductSlider from '../Components/Products/ProductsSlider'
 import Loading from '../Components/Loading/Loading'
 import CategoryItemsRound from '../Components/Categories/CategoryItemsRound'
+import AllProducts from '../Components/Products/AllProducts'
 
 const Home = () => {
     const [loading,setLoading]= useState(true)
@@ -24,26 +25,9 @@ const Home = () => {
       <Ads/>
       <div className='w-7xl m-auto'>
         <CategoryItemsRound/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <Products topic='Trending Products' rows={1} slidesPerView={5}/>
-      <div className='h-screen bg-amber-200'>
-
-      </div>
+      <ProductSlider topic='Trending Products' rows={1} slidesPerView={5}/>
+      <AllProducts/>
+  
 
       </div>
     </div>
