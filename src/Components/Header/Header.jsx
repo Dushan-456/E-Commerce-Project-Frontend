@@ -5,13 +5,12 @@ import IconButton from "@mui/material/IconButton";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/Images/e-com_logo.png";
 import "./Header.css";
-import * as React from "react";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { styled } from "@mui/material/styles";
-import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 import HeaderNavMenu from "../Menus/HeaderNavMenu";
 import { Link } from "react-router-dom";
 
@@ -89,26 +88,25 @@ const Header = () => {
 
    return (
       <header
-         className={`w-screen  top-0 z-50 transition-all duration-300 ease-in-out ${
+         className={`w-screen  top-0  z-50 transition-all duration-300 ease-in-out ${
             isShrunk ? "py-2 shadow-md" : "p-3"
          }`}>
-         <div className="w-7xl m-auto">
+         <div className=" head w-7xl m-auto">
             <div
-               className={`top-header flex justify-between items-center transition-all duration-300 ${
+               className={`top-header  flex justify-between items-center transition-all duration-300 ${
                   isShrunk ? "h-14" : "h-20"
                }`}>
-                  <Link to='/'>
-                  <IconButton style={{borderRadius:'10px'}}>
-                     
-               <img
-                  src={Logo}
-                  alt="Logo"
-                  className={`logo transition-all duration-300 ${
-                     isShrunk ? "w-35" : "w-40"
-                  }`}
-               />
+               <Link to="/">
+                  <IconButton style={{ borderRadius: "10px" }}>
+                     <img
+                        src={Logo}
+                        alt="Logo"
+                        className={`logo transition-all duration-300 ${
+                           isShrunk ? "w-35" : "w-40"
+                        }`}
+                     />
                   </IconButton>
-                  </Link>
+               </Link>
 
                <div className="search">
                   <input
@@ -124,12 +122,23 @@ const Header = () => {
                <FormControlLabel
                   control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
                />
-
+               <div>
+                  <IconButton color="inherit">
+                     <FavoriteBorderIcon style={{ fontSize: "30px" }} />
+                  </IconButton>
+                  <IconButton color="inherit">
+                     <AccountCircleIcon style={{ fontSize: "30px" }} />
+                  </IconButton>
+                  <IconButton color="inherit">
+                     <Badge badgeContent={4} color="error">
+                        <NotificationsIcon style={{ fontSize: "30px" }} />
+                     </Badge>
+                  </IconButton>
+               </div>
                <div className="cart">
                   <IconButton
                      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
                      size="large"
-                     aria-label="show 4 new mails"
                      color="inherit">
                      <Badge badgeContent={4} color="error">
                         <LocalMallIcon style={{ fontSize: "32px" }} />
