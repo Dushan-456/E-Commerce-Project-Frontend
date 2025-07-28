@@ -13,6 +13,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import HeaderNavMenu from "../Menus/HeaderNavMenu";
 import { Link } from "react-router-dom";
+import Headercategories from "./Headercategories";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
    width: 62,
@@ -114,9 +115,9 @@ const Header = () => {
                      type="text"
                      placeholder="Search"
                   />
-                  <button>
+                  <IconButton color="black">
                      <SearchIcon />
-                  </button>
+                  </IconButton>
                </div>
 
                <FormControlLabel
@@ -148,9 +149,11 @@ const Header = () => {
             </div>
             <div className="bottom-header">
                <div className="bottom-header-left">
+                  <Headercategories />
+               </div>
+               <div>
                   <HeaderNavMenu />
                </div>
-               <div></div>
             </div>
          </div>
       </header>
