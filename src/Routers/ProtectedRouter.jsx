@@ -4,7 +4,7 @@ import Error403Page from "../Pages/Error403Page";
 const ProtectedRouter = ({ProtectedRole}) => {
    const user = {
       isAuthenticated: true,
-      role: "admin", // or "admin"
+      role: "user", // or "admin"
    };
 
    if (!user.isAuthenticated) {
