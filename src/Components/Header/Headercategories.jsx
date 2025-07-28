@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -188,7 +188,6 @@ const categoryitems = [
 const HeaderCategories = () => {
    const [open, setOpen] = useState(false);
    const dropdownRef = useRef(null);
-
    const navigate = useNavigate();
 
    const handleCategoryClick = (id) => {
