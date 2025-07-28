@@ -7,8 +7,7 @@ const MainLayout = () => {
       <div className="w-full h-screen">
          <Header />
          <div className="mt-30">
-         <Outlet />
-
+            <Outlet />
          </div>
          <Footer />
       </div>
