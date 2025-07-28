@@ -1,5 +1,6 @@
 import ImagesGallery from "../../Components/SingleProductPage/ImagesGallery";
 import ProductDetails from "../../Components/SingleProductPage/ProductDetails";
+import StickyCard from "../../Components/SingleProductPage/StickyCard";
 import "./Product.css";
 
 const Product = () => {
@@ -21,7 +22,9 @@ const Product = () => {
                </div>
             </div>
             <div className="pt-9  flex-1/4">
-            <div className=" h-78 sticky top-35 rounded-xl" style={{boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px'}}><h1>buy</h1></div>
+            <div className="h-120 sticky top-35 rounded-xl" style={{boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px'}}>
+               <StickyCard/>
+            </div>
             </div>
          </div>
       </div>
