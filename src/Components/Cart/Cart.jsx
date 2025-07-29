@@ -5,6 +5,7 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import CartSummary from "./CartSummary";
+import CartProductItem from "./CartProductItem";
 
 const style = {
    position: "absolute",
@@ -15,7 +16,7 @@ const style = {
    bgcolor: "background.paper",
    border: "2px solid #000",
    boxShadow: 24,
-   p: 4,
+   p: 2,
 };
 
 const Cart = () => {
@@ -44,10 +45,10 @@ const Cart = () => {
             aria-describedby="modal-modal-description">
             <Box sx={style}>
                <div className="flex items-center justify-between ">
-                  <div className="bg-amber-800 h-[60vh]">
-                     <h1>left side</h1>
+                  <div className=" h-[60vh] custom-scroll overflow-y-scroll flex-2/3">
+                     <CartProductItem/>
                   </div>
-                  <div>
+                  <div className="pl-5 flex-1/3">
                      <CartSummary />
                   </div>
                </div>
