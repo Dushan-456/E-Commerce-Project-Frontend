@@ -6,6 +6,7 @@ import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import CartSummary from "./CartSummary";
 import CartProductItem from "./CartProductItem";
+import CloseIcon from '@mui/icons-material/Close';
 
 const style = {
    position: "absolute",
@@ -46,9 +47,23 @@ const Cart = () => {
             <Box sx={style}>
                <div className="flex items-center justify-between ">
                   <div className=" h-[60vh] custom-scroll overflow-y-scroll flex-2/3">
-                     <CartProductItem/>
+                     <CartProductItem />
+                     <CartProductItem />
+                     <CartProductItem />
+                     <CartProductItem />
+                     <CartProductItem />
+                     <CartProductItem />
+                     <CartProductItem />
+                     <CartProductItem />
+                     <CartProductItem />
                   </div>
                   <div className="pl-5 flex-1/3">
+                     <IconButton
+                        onClick={handleClose}
+                        style={{position:'fixed' , top:'0',right:'0' }}
+                        color="inherit">
+                           <CloseIcon style={{ fontSize: "30px", color:'red' }} />
+                     </IconButton>
                      <CartSummary />
                   </div>
                </div>
