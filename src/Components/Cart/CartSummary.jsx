@@ -1,14 +1,10 @@
 import Button from "@mui/material/Button";
-import ShareIcon from "@mui/icons-material/Share";
-import AddIcon from "@mui/icons-material/Add";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import RemoveIcon from "@mui/icons-material/Remove";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 
 const CartSummary = () => {
    return (
       <div
-         className="flex flex-col gap-5 rounded-xl h-full p-5 w-80"
+         className="flex flex-col gap-5 rounded-xl h-full p-5"
          style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
          <div className="flex pt-2 items-center justify-between">
             <h3>EFTY-4568</h3>
@@ -33,8 +29,10 @@ const CartSummary = () => {
          <hr />
          <div className="flex pt-2 items-center justify-between">
             <p className="font-bold">Estimated Total</p>
-            
-            <p className="font-bold text-xl"><span className="font-normal text-sm">LKR</span> 7300.00</p>
+
+            <p className="font-bold text-xl">
+               <span className="font-normal text-sm">LKR</span> 7300.00
+            </p>
          </div>
 
          <hr />
