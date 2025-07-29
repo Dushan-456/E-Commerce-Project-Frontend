@@ -9,8 +9,10 @@ import "swiper/css/pagination";
 const sampleproducts = [
    {
       ProductID: 1,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
-      ProductTitle: "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
+      ProductTitle:
+         "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       Price: 12500,
       Discount: 12,
       ratings: 1.5,
@@ -18,7 +20,8 @@ const sampleproducts = [
    },
    {
       ProductID: 2,
-      ProductImgURL: "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
       ProductTitle: "Wireless Headphones",
       Price: 8900,
       Discount: 20,
@@ -27,7 +30,8 @@ const sampleproducts = [
    },
    {
       ProductID: 3,
-      ProductImgURL: "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
       ProductTitle: "Dell Inspiron Laptop",
       Price: 175000,
       Discount: 10,
@@ -36,7 +40,8 @@ const sampleproducts = [
    },
    {
       ProductID: 4,
-      ProductImgURL: "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
       ProductTitle: "Beauty Cream",
       Price: 2250,
       Discount: 18,
@@ -45,7 +50,8 @@ const sampleproducts = [
    },
    {
       ProductID: 5,
-      ProductImgURL: "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
       ProductTitle: "Nike Running Shoes",
       Price: 14500,
       Discount: 25,
@@ -54,7 +60,8 @@ const sampleproducts = [
    },
    {
       ProductID: 6,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
       ProductTitle: "Samsung Galaxy S22",
       Price: 225000,
       Discount: 15,
@@ -63,7 +70,8 @@ const sampleproducts = [
    },
    {
       ProductID: 7,
-      ProductImgURL: "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
       ProductTitle: "Travel Backpack",
       Price: 4200,
       Discount: 30,
@@ -72,7 +80,8 @@ const sampleproducts = [
    },
    {
       ProductID: 8,
-      ProductImgURL: "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
       ProductTitle: "Canon DSLR Camera",
       Price: 225000,
       Discount: 8,
@@ -81,7 +90,8 @@ const sampleproducts = [
    },
    {
       ProductID: 9,
-      ProductImgURL: "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
       ProductTitle: "Gaming Mouse",
       Price: 3900,
       Discount: 22,
@@ -90,7 +100,8 @@ const sampleproducts = [
    },
    {
       ProductID: 10,
-      ProductImgURL: "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
       ProductTitle: "Bluetooth Speaker",
       Price: 6900,
       Discount: 17,
@@ -99,15 +110,14 @@ const sampleproducts = [
    },
 ];
 
-
 // import required modules
-import { Grid, Mousewheel,Navigation } from "swiper/modules";
+import { Grid, Mousewheel, Navigation } from "swiper/modules";
 import ProductItem from "./ProductItem";
 
-const ProductSlider = ({topic,rows,slidesPerView}) => {
+const ProductSlider = ({ topic, rows, slidesPerView }) => {
    return (
       <section>
-         <h1 className="products-topic" >{topic}</h1>
+         <h1 className="products-topic">{topic}</h1>
 
          <Swiper
             slidesPerView={slidesPerView}
@@ -120,28 +130,31 @@ const ProductSlider = ({topic,rows,slidesPerView}) => {
             }}
             mousewheel={true}
             navigation={true}
-            modules={[Grid , Mousewheel ,Navigation]}>
-         {sampleproducts.map(
-            ({
-               ProductImgURL,
-               ProductTitle,
-               Price,
-               Discount,
-               ratings,
-               itemSold,
-            },
-            index)=>(
-                <SwiperSlide key={index}>
-                    <ProductItem
-                    ProductImgURL={ProductImgURL}
-                  ProductTitle={ProductTitle}
-                  Price={Price}
-                  Discount={Discount}
-                  ratings={ratings}
-                  itemSold={itemSold}/>
-                </SwiperSlide>
-            )
-         )}
+            modules={[Grid, Mousewheel, Navigation]}>
+            {sampleproducts.map(
+               (
+                  {
+                     ProductImgURL,
+                     ProductTitle,
+                     Price,
+                     Discount,
+                     ratings,
+                     itemSold,
+                  },
+                  index
+               ) => (
+                  <SwiperSlide key={index}>
+                     <ProductItem
+                        ProductImgURL={ProductImgURL}
+                        ProductTitle={ProductTitle}
+                        Price={Price}
+                        Discount={Discount}
+                        ratings={ratings}
+                        itemSold={itemSold}
+                     />
+                  </SwiperSlide>
+               )
+            )}
          </Swiper>
       </section>
    );
