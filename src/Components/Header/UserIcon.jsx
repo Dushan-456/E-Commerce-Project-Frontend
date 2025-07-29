@@ -70,24 +70,35 @@ const UserIcon = () => {
                   </IconButton>
                 </div>
 <hr />
-               <button className="flex items-center w-full text-left px-4 py-2 hover:bg-gray-100">
+               <button className="flex items-center cursor-pointer w-full text-left px-4 py-2 hover:bg-gray-100">
                      <span>Settings</span>
                 </button>
-               <button className="flex items-center w-full text-left px-4 py-2 hover:bg-gray-100">
+               <button className="flex items-center cursor-pointer w-full text-left px-4 py-2 hover:bg-gray-100">
                      <span>Settings</span>
                 </button>
-               <button className="flex items-center w-full text-left px-4 py-2 hover:bg-gray-100">
+               <button className="flex items-center cursor-pointer w-full text-left px-4 py-2 hover:bg-gray-100">
                      <span>Settings</span>
                 </button>
-               <button className="flex justify-center items-center w-full bg-[#6841f3] text-white text-left px-4 py-2 hover:bg-[#3a305a]">
+               <button className="flex justify-center cursor-pointer mt-2 items-center rounded-xl w-full bg-[#6841f3] text-white text-left px-4 py-2 hover:bg-[#3a305a]">
                      <span className="text-center">Go to Profile</span>
                 </button>
                </div>
 :                 
-                <div>
-
-                    Login
+                          <div className="p-5">
+                                <div className="flex items-center gap-2 mb-2 ">
+    <p>Welcome to</p> <h3 className="text-lg font-bold">clickSHOP</h3>
+         
                 </div>
+<hr />
+       
+  
+               <button onClick={() => navigate('/login')} className="cursor-pointer flex justify-center mt-5 rounded-xl items-center w-full bg-[#000000] text-white text-left px-4 py-2 hover:bg-[#3a305a]">
+                     <span className="text-center">Login</span>
+                </button>
+               <button className="flex cursor-pointer justify-center mt-5 rounded-xl items-center w-full bg-[#6841f3] text-white text-left px-4 py-2 hover:bg-[#3a305a]">
+                     <span className="text-center">Register</span>
+                </button>
+               </div>
 
                
 
