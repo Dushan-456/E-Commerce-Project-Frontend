@@ -15,8 +15,8 @@ const CartProductItem = () => {
    };
    return (
       <div
-         className=" rounded-xl  p-2 m-2 h-min "
-         style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
+         className=" rounded-xl  p-2 m-2 mb-10 h-min "
+         style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
          <div className="flex items-start">
             <img
                className="rounded-xl"
@@ -26,25 +26,40 @@ const CartProductItem = () => {
                alt=""
             />
             <div className="pl-5">
-               <p className="font-bold leading-[1.2] text-zinc-500">
+               <p className="font-bold leading-[1.2]  text-zinc-500">
                   99 Speed Professional Muscle Massage Gun Massager Massager for
                   Neck and Back Massage Instrument Dropshipping Fitness
                   Equipment
                </p>
-               <div className="pt-2">
-                <hr />
+               <div>
                   <Rating
                      name="half-rating-read"
                      defaultValue={5}
                      precision={0.1}
                      readOnly
                      size="small"
-                  /> <span>4.5 </span>
+                  />{" "}
+                  <span>4.5 </span>
                </div>
+               <hr />
+               <div className=" flex items-center justify-between pt-2">
+                  <div className="text-[0.7em]">
+                     <span>Colour : Red</span>
+                     {"  |  "}
+                     <span>Size : Large</span>
+                  </div>
+                  <div></div>
+               </div>
+
                <div className=" flex items-center justify-between">
                   <div>
                      <p className="text-center text-[0.8em]">Price</p>
-                     <p className="font-bold m-[-5px]">LKR 2000</p>
+                     <p className="font-bold m-[-5px]">
+                        LKR 2000.00{" "}
+                        <span className="font-normal text-[0.8em] line-through text-red-700">
+                           3000.00
+                        </span>
+                     </p>
                   </div>
                   <div className="flex gap-5 justify-center items-center">
                      <button
