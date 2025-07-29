@@ -1,6 +1,4 @@
 import SearchIcon from "@mui/icons-material/Search";
-import Badge from "@mui/material/Badge";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
 import IconButton from "@mui/material/IconButton";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/Images/e-com_logo.png";
@@ -14,6 +12,7 @@ import { Link } from "react-router-dom";
 import Headercategories from "./Headercategories";
 import Notifications from "./Notifications";
 import UserIcon from "./UserIcon";
+import Cart from "../Cart/Cart";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
    width: 62,
@@ -127,20 +126,10 @@ const Header = () => {
                   <IconButton color="inherit">
                      <FavoriteBorderIcon style={{ fontSize: "30px" }} />
                   </IconButton>
-                  <UserIcon/>
-                  <Notifications/>
-    
+                  <UserIcon />
+                  <Notifications />
                </div>
-               <div className="cart">
-                  <IconButton
-                     style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
-                     size="large"
-                     color="inherit">
-                     <Badge badgeContent={4} color="error">
-                        <LocalMallIcon style={{ fontSize: "32px" }} />
-                     </Badge>
-                  </IconButton>
-               </div>
+               <Cart />
             </div>
             <div className="bottom-header">
                <div className="bottom-header-left">
