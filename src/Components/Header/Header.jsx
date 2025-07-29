@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import Logo from "../../assets/Images/e-com_logo.png";
 import "./Header.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
@@ -14,6 +13,7 @@ import HeaderNavMenu from "../Menus/HeaderNavMenu";
 import { Link } from "react-router-dom";
 import Headercategories from "./Headercategories";
 import Notifications from "./Notifications";
+import UserIcon from "./UserIcon";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
    width: 62,
@@ -127,9 +127,7 @@ const Header = () => {
                   <IconButton color="inherit">
                      <FavoriteBorderIcon style={{ fontSize: "30px" }} />
                   </IconButton>
-                  <IconButton color="inherit">
-                     <AccountCircleIcon style={{ fontSize: "30px" }} />
-                  </IconButton>
+                  <UserIcon/>
                   <Notifications/>
     
                </div>
