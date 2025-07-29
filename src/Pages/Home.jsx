@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 2000) // 2 seconds fake loading
+    }, 1000) // 2 seconds fake loading
 
     return () => clearTimeout(timer) // cleanup
   }, [])
