@@ -476,12 +476,9 @@ const AllProducts = () => {
    );
 
    return (
-      <div className="px-4 sm:px-6 md:px-10 py-6">
-         <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-            All Products
-         </h2>
+      <div >
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-5">
+      <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {paginatedProducts.map((product) => (
                <ProductItem key={product.ProductID} {...product} />
             ))}
