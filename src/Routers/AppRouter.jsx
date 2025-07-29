@@ -12,7 +12,7 @@ import UserProfile from "../Pages/UserProfile";
 import LoginPage from "../Pages/Login/LoginPage";
 import Error404Page from "../Pages/Error404Page";
 import CategoryItems from "../Pages/CategoryItems";
-import Product from "../Pages/Product/Product";
+import SingleProductPage from "../Pages/Product/SingleProductPage";
 import ProtectedRouter from "./ProtectedRouter";
 
 const router = createBrowserRouter([
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
          },
          {
             path: "product/:ProductID",
-            element: <Product />,
+            element: <SingleProductPage />,
          },
          {
             element: <ProtectedRouter ProtectedRole="user"/>,
