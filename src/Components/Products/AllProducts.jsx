@@ -6,8 +6,10 @@ import ProductItem from "./ProductItem"; // adjust path as needed
 const allProducts = [
    {
       ProductID: 1,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
-      ProductTitle: "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
+      ProductTitle:
+         "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       Price: 12500,
       Discount: 12,
       ratings: 1.5,
@@ -15,7 +17,8 @@ const allProducts = [
    },
    {
       ProductID: 2,
-      ProductImgURL: "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
       ProductTitle: "Wireless Headphones",
       Price: 8900,
       Discount: 20,
@@ -24,7 +27,8 @@ const allProducts = [
    },
    {
       ProductID: 3,
-      ProductImgURL: "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
       ProductTitle: "Dell Inspiron Laptop",
       Price: 175000,
       Discount: 10,
@@ -33,7 +37,8 @@ const allProducts = [
    },
    {
       ProductID: 4,
-      ProductImgURL: "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
       ProductTitle: "Beauty Cream",
       Price: 2250,
       Discount: 18,
@@ -42,7 +47,8 @@ const allProducts = [
    },
    {
       ProductID: 5,
-      ProductImgURL: "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
       ProductTitle: "Nike Running Shoes",
       Price: 14500,
       Discount: 25,
@@ -51,7 +57,8 @@ const allProducts = [
    },
    {
       ProductID: 6,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
       ProductTitle: "Samsung Galaxy S22",
       Price: 225000,
       Discount: 15,
@@ -60,7 +67,8 @@ const allProducts = [
    },
    {
       ProductID: 7,
-      ProductImgURL: "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
       ProductTitle: "Travel Backpack",
       Price: 4200,
       Discount: 30,
@@ -69,7 +77,8 @@ const allProducts = [
    },
    {
       ProductID: 8,
-      ProductImgURL: "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
       ProductTitle: "Canon DSLR Camera",
       Price: 225000,
       Discount: 8,
@@ -78,7 +87,8 @@ const allProducts = [
    },
    {
       ProductID: 9,
-      ProductImgURL: "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
       ProductTitle: "Gaming Mouse",
       Price: 3900,
       Discount: 22,
@@ -87,7 +97,8 @@ const allProducts = [
    },
    {
       ProductID: 10,
-      ProductImgURL: "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
       ProductTitle: "Bluetooth Speaker",
       Price: 6900,
       Discount: 17,
@@ -96,8 +107,10 @@ const allProducts = [
    },
    {
       ProductID: 1,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
-      ProductTitle: "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
+      ProductTitle:
+         "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       Price: 12500,
       Discount: 12,
       ratings: 1.5,
@@ -105,7 +118,8 @@ const allProducts = [
    },
    {
       ProductID: 2,
-      ProductImgURL: "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
       ProductTitle: "Wireless Headphones",
       Price: 8900,
       Discount: 20,
@@ -114,7 +128,8 @@ const allProducts = [
    },
    {
       ProductID: 3,
-      ProductImgURL: "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
       ProductTitle: "Dell Inspiron Laptop",
       Price: 175000,
       Discount: 10,
@@ -123,7 +138,8 @@ const allProducts = [
    },
    {
       ProductID: 4,
-      ProductImgURL: "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
       ProductTitle: "Beauty Cream",
       Price: 2250,
       Discount: 18,
@@ -132,7 +148,8 @@ const allProducts = [
    },
    {
       ProductID: 5,
-      ProductImgURL: "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
       ProductTitle: "Nike Running Shoes",
       Price: 14500,
       Discount: 25,
@@ -141,7 +158,8 @@ const allProducts = [
    },
    {
       ProductID: 6,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
       ProductTitle: "Samsung Galaxy S22",
       Price: 225000,
       Discount: 15,
@@ -150,7 +168,8 @@ const allProducts = [
    },
    {
       ProductID: 7,
-      ProductImgURL: "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
       ProductTitle: "Travel Backpack",
       Price: 4200,
       Discount: 30,
@@ -159,7 +178,8 @@ const allProducts = [
    },
    {
       ProductID: 8,
-      ProductImgURL: "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
       ProductTitle: "Canon DSLR Camera",
       Price: 225000,
       Discount: 8,
@@ -168,7 +188,8 @@ const allProducts = [
    },
    {
       ProductID: 9,
-      ProductImgURL: "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
       ProductTitle: "Gaming Mouse",
       Price: 3900,
       Discount: 22,
@@ -177,7 +198,8 @@ const allProducts = [
    },
    {
       ProductID: 10,
-      ProductImgURL: "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
       ProductTitle: "Bluetooth Speaker",
       Price: 6900,
       Discount: 17,
@@ -186,8 +208,10 @@ const allProducts = [
    },
    {
       ProductID: 1,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
-      ProductTitle: "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
+      ProductTitle:
+         "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       Price: 12500,
       Discount: 12,
       ratings: 1.5,
@@ -195,7 +219,8 @@ const allProducts = [
    },
    {
       ProductID: 2,
-      ProductImgURL: "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
       ProductTitle: "Wireless Headphones",
       Price: 8900,
       Discount: 20,
@@ -204,7 +229,8 @@ const allProducts = [
    },
    {
       ProductID: 3,
-      ProductImgURL: "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
       ProductTitle: "Dell Inspiron Laptop",
       Price: 175000,
       Discount: 10,
@@ -213,7 +239,8 @@ const allProducts = [
    },
    {
       ProductID: 4,
-      ProductImgURL: "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
       ProductTitle: "Beauty Cream",
       Price: 2250,
       Discount: 18,
@@ -222,7 +249,8 @@ const allProducts = [
    },
    {
       ProductID: 5,
-      ProductImgURL: "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
       ProductTitle: "Nike Running Shoes",
       Price: 14500,
       Discount: 25,
@@ -231,7 +259,8 @@ const allProducts = [
    },
    {
       ProductID: 6,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
       ProductTitle: "Samsung Galaxy S22",
       Price: 225000,
       Discount: 15,
@@ -240,7 +269,8 @@ const allProducts = [
    },
    {
       ProductID: 7,
-      ProductImgURL: "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
       ProductTitle: "Travel Backpack",
       Price: 4200,
       Discount: 30,
@@ -249,7 +279,8 @@ const allProducts = [
    },
    {
       ProductID: 8,
-      ProductImgURL: "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
       ProductTitle: "Canon DSLR Camera",
       Price: 225000,
       Discount: 8,
@@ -258,7 +289,8 @@ const allProducts = [
    },
    {
       ProductID: 9,
-      ProductImgURL: "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
       ProductTitle: "Gaming Mouse",
       Price: 3900,
       Discount: 22,
@@ -267,7 +299,8 @@ const allProducts = [
    },
    {
       ProductID: 10,
-      ProductImgURL: "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
       ProductTitle: "Bluetooth Speaker",
       Price: 6900,
       Discount: 17,
@@ -276,8 +309,10 @@ const allProducts = [
    },
    {
       ProductID: 1,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
-      ProductTitle: "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
+      ProductTitle:
+         "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       Price: 12500,
       Discount: 12,
       ratings: 1.5,
@@ -285,7 +320,8 @@ const allProducts = [
    },
    {
       ProductID: 2,
-      ProductImgURL: "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
       ProductTitle: "Wireless Headphones",
       Price: 8900,
       Discount: 20,
@@ -294,7 +330,8 @@ const allProducts = [
    },
    {
       ProductID: 3,
-      ProductImgURL: "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
       ProductTitle: "Dell Inspiron Laptop",
       Price: 175000,
       Discount: 10,
@@ -303,7 +340,8 @@ const allProducts = [
    },
    {
       ProductID: 4,
-      ProductImgURL: "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
       ProductTitle: "Beauty Cream",
       Price: 2250,
       Discount: 18,
@@ -312,7 +350,8 @@ const allProducts = [
    },
    {
       ProductID: 5,
-      ProductImgURL: "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
       ProductTitle: "Nike Running Shoes",
       Price: 14500,
       Discount: 25,
@@ -321,7 +360,8 @@ const allProducts = [
    },
    {
       ProductID: 6,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
       ProductTitle: "Samsung Galaxy S22",
       Price: 225000,
       Discount: 15,
@@ -330,7 +370,8 @@ const allProducts = [
    },
    {
       ProductID: 7,
-      ProductImgURL: "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
       ProductTitle: "Travel Backpack",
       Price: 4200,
       Discount: 30,
@@ -339,7 +380,8 @@ const allProducts = [
    },
    {
       ProductID: 8,
-      ProductImgURL: "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
       ProductTitle: "Canon DSLR Camera",
       Price: 225000,
       Discount: 8,
@@ -348,7 +390,8 @@ const allProducts = [
    },
    {
       ProductID: 9,
-      ProductImgURL: "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
       ProductTitle: "Gaming Mouse",
       Price: 3900,
       Discount: 22,
@@ -357,7 +400,8 @@ const allProducts = [
    },
    {
       ProductID: 10,
-      ProductImgURL: "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
       ProductTitle: "Bluetooth Speaker",
       Price: 6900,
       Discount: 17,
@@ -366,8 +410,10 @@ const allProducts = [
    },
    {
       ProductID: 1,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
-      ProductTitle: "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartwatch-digital-device_53876-96804.jpg?w=740",
+      ProductTitle:
+         "Apple Watchddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
       Price: 12500,
       Discount: 12,
       ratings: 1.5,
@@ -375,7 +421,8 @@ const allProducts = [
    },
    {
       ProductID: 2,
-      ProductImgURL: "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/wireless-headphones-digital-device_53876-96810.jpg?w=740",
       ProductTitle: "Wireless Headphones",
       Price: 8900,
       Discount: 20,
@@ -384,7 +431,8 @@ const allProducts = [
    },
    {
       ProductID: 3,
-      ProductImgURL: "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/laptop-digital-device_53876-96802.jpg?w=740",
       ProductTitle: "Dell Inspiron Laptop",
       Price: 175000,
       Discount: 10,
@@ -393,7 +441,8 @@ const allProducts = [
    },
    {
       ProductID: 4,
-      ProductImgURL: "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/cosmetic-beauty-product-makeup_53876-96813.jpg?w=740",
       ProductTitle: "Beauty Cream",
       Price: 2250,
       Discount: 18,
@@ -402,7 +451,8 @@ const allProducts = [
    },
    {
       ProductID: 5,
-      ProductImgURL: "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/modern-shoes_53876-96808.jpg?w=740",
       ProductTitle: "Nike Running Shoes",
       Price: 14500,
       Discount: 25,
@@ -411,7 +461,8 @@ const allProducts = [
    },
    {
       ProductID: 6,
-      ProductImgURL: "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/smartphone-digital-device_53876-96811.jpg?w=740",
       ProductTitle: "Samsung Galaxy S22",
       Price: 225000,
       Discount: 15,
@@ -420,7 +471,8 @@ const allProducts = [
    },
    {
       ProductID: 7,
-      ProductImgURL: "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/stylish-backpack_53876-96806.jpg?w=740",
       ProductTitle: "Travel Backpack",
       Price: 4200,
       Discount: 30,
@@ -429,7 +481,8 @@ const allProducts = [
    },
    {
       ProductID: 8,
-      ProductImgURL: "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/camera-digital-device_53876-96803.jpg?w=740",
       ProductTitle: "Canon DSLR Camera",
       Price: 225000,
       Discount: 8,
@@ -438,7 +491,8 @@ const allProducts = [
    },
    {
       ProductID: 9,
-      ProductImgURL: "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/gaming-mouse-digital-device_53876-96807.jpg?w=740",
       ProductTitle: "Gaming Mouse",
       Price: 3900,
       Discount: 22,
@@ -447,7 +501,8 @@ const allProducts = [
    },
    {
       ProductID: 10,
-      ProductImgURL: "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
+      ProductImgURL:
+         "https://img.freepik.com/free-photo/bluetooth-speaker-digital-device_53876-96809.jpg?w=740",
       ProductTitle: "Bluetooth Speaker",
       Price: 6900,
       Discount: 17,
@@ -455,7 +510,6 @@ const allProducts = [
       itemSold: 3000,
    },
 ];
-
 
 const AllProducts = () => {
    const [page, setPage] = useState(0);
@@ -476,9 +530,8 @@ const AllProducts = () => {
    );
 
    return (
-      <div >
-
-      <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div>
+         <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {paginatedProducts.map((product) => (
                <ProductItem key={product.ProductID} {...product} />
             ))}
