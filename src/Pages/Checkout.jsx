@@ -1,4 +1,5 @@
 import CheckoutSummary from "../Components/Checkout/CheckoutSummary"
+import PaymentMethods from "../Components/Checkout/PaymentMethods"
 import ShippingAddress from "../Components/Checkout/ShippingAddress"
 
 const Checkout = () => {
@@ -7,6 +8,7 @@ const Checkout = () => {
             <div className="flex">
                 <div className="flex-2/3 mr-5">
                     <ShippingAddress/>
+                    <PaymentMethods/>
                 </div>
                 <div className="flex-1/3">
                     <CheckoutSummary />
