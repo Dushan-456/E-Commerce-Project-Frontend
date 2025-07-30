@@ -4,7 +4,14 @@ import { useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-const CartProductItem = () => {
+const CartProductItem = ({
+   ProductImgURL,
+   ProductTitle,
+   Price,
+   Discount,
+   ratings,
+}) => {
+   const SalePrice = ((Price * (100 - Discount)) / 100).toFixed(2)
    const [qty, setQty] = useState(1);
 
    const qtyIncrease = () => {
@@ -17,31 +24,27 @@ const CartProductItem = () => {
       <div
          className=" rounded-xl  p-2 m-2 mb-10 h-min "
          style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-         <div className="flex items-start">
+         <div className="flex items-start  ">
             <img
-               className="rounded-xl"
-               width={110}
-               height={110}
-               src="https://ae-pic-a1.aliexpress-media.com/kf/S03c90a4640444a0a9677de41a99355ee3.jpeg_220x220q75.jpeg_.avif"
-               alt=""
+               className="rounded-xl object-cover w-[120px] h-[120px] "
+
+               src={ProductImgURL}
+               alt={ProductTitle}
             />
-            <div className="pl-5">
-               <p className="font-bold leading-[1.2]  text-zinc-500">
-                  99 Speed Professional Muscle Massage Gun Massager Massager for
-                  Neck and Back Massage Instrument Dropshipping Fitness
-                  Equipment
+            <div className="pl-5 pr-2  w-full overflow-hidden">
+               <p className="font-bold leading-[1.2]  text-zinc-500">{ProductTitle}
                </p>
                <div>
                   <Rating
                      name="half-rating-read"
-                     defaultValue={5}
+                     defaultValue={ratings}
                      precision={0.1}
                      readOnly
                      size="small"
                   />{" "}
                   <span>4.5 </span>
                </div>
-               <hr />
+
                <div className=" flex items-center justify-between pt-2">
                   <div className="text-[0.7em]">
                      <span>Colour : Red</span>
@@ -55,9 +58,9 @@ const CartProductItem = () => {
                   <div>
                      <p className="text-center text-[0.8em]">Price</p>
                      <p className="font-bold m-[-5px]">
-                        LKR 2000.00{" "}
+                        LKR {SalePrice}.00{" "}
                         <span className="font-normal text-[0.8em] line-through text-red-700">
-                           3000.00
+                           {Price}.00
                         </span>
                      </p>
                   </div>
@@ -76,7 +79,7 @@ const CartProductItem = () => {
                   </div>
                   <div>
                      <p className="text-center text-[0.8em]">Total</p>
-                     <p className="font-bold m-[-5px]">LKR 2000</p>
+                     <p className="font-bold m-[-5px]">LKR {SalePrice * qty}.00</p>
                   </div>
                </div>
             </div>
