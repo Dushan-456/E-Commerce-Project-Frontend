@@ -14,7 +14,7 @@ const CheckoutSummary = ({ handleClose }) => {
 
    return (
       <div
-         className="flex flex-col gap-5 rounded-xl h-full p-5"
+         className="flex flex-col gap-5 rounded-xl sticky top-40 p-5"
          style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
          <div className="flex pt-2 items-center justify-between">
             <h3 className="font-bold">clickSTORE</h3>
