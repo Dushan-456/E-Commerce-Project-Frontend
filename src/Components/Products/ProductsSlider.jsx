@@ -139,7 +139,7 @@ const ProductSlider = ({ topic, rows, slidesPerView }) => {
                      Price,
                      Discount,
                      ratings,
-                     itemSold,
+                     
                   },
                   index
                ) => (
@@ -150,7 +150,6 @@ const ProductSlider = ({ topic, rows, slidesPerView }) => {
                         Price={Price}
                         Discount={Discount}
                         ratings={ratings}
-                        itemSold={itemSold}
                      />
                   </SwiperSlide>
                )
