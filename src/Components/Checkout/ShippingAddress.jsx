@@ -40,7 +40,7 @@ const ShippingAddress = () => {
 
    return (
       <div
-         className="flex flex-col gap-5 rounded-xl h-full p-5"
+         className="flex flex-col gap-5 rounded-xl  p-5"
          style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
          <h2 className="text-xl font-bold">Shipping Address</h2>
 
