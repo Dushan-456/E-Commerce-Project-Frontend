@@ -1,13 +1,23 @@
 import Button from "@mui/material/Button";
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import StorefrontIcon from "@mui/icons-material/Storefront";
+import { useNavigate } from "react-router-dom";
 
-const CartSummary = () => {
+const CartSummary = ({ handleClose }) => {
+
+   const navigate = useNavigate()
+
+   const handleCheckout = () => {
+      handleClose();
+      navigate("/checkout");
+   };
+
    return (
       <div
          className="flex flex-col gap-5 rounded-xl h-full p-5"
          style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px" }}>
          <div className="flex pt-2 items-center justify-between">
-            <h3>EFTY-4568</h3>
+            <h3 className="font-bold">clickSTORE</h3>
             <StorefrontIcon />
          </div>
          <div className="flex  items-center justify-between">
@@ -38,7 +48,7 @@ const CartSummary = () => {
          <hr />
 
          <div className="">
-            <Button variant="contained" className="w-full !bg-red-500 !mb-3">
+            <Button onClick={handleCheckout} variant="contained" className="w-full !bg-red-500 !mb-3" startIcon={<ShoppingBasketIcon />} >
                Checkout
             </Button>
          </div>
