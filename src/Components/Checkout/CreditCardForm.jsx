@@ -1,9 +1,10 @@
 import { useState } from "react";
-import "../../index.css"; 
+import "../../index.css";
+import "./CreditCardForm.css";
 
-const  CreditCardForm = ()=> {
+const CreditCardForm = () => {
   const [cardNumber, setCardNumber] = useState("XXXX XXXX XXXX XXXX");
-  const [cardName, setCardName] = useState("FULL NAME");
+  const [cardName, setCardName] = useState("CARD HOLDER NAME");
   const [expiry, setExpiry] = useState("MM/YY");
   const [cvv, setCvv] = useState("XXX");
   const [isFlipped, setIsFlipped] = useState(false);
@@ -12,21 +13,38 @@ const  CreditCardForm = ()=> {
     <div className=" flex items-center justify-center p-6">
       <div className="w-full max-w-md space-y-6">
         {/* Credit Card */}
-        <div className="w-full h-52 perspective">
+        <div className="w-full h-70  perspective">
           <div className={`card-3d w-full h-full ${isFlipped ? "card-flipped" : ""}`}>
             {/* Front */}
-            <div className="card-front bg-gradient-to-r from-indigo-500 to-purple-600">
-              <div className="text-lg tracking-widest">{cardNumber}</div>
-              <div className="mt-8 text-sm">Card Holder</div>
-              <div className="text-xl">{cardName}</div>
-              <div className="mt-2 text-sm">Expires</div>
-              <div className="text-lg">{expiry}</div>
+            <div className="card-front">
+              <div className="h-full flex flex-col ">
+                <div className="flex-1/2 ">
+
+                </div>
+                <div className="flex-1/2 flex flex-col justify-between  ">
+                  <div className="text-2xl card-font text-center  tracking-widest">{cardNumber || "XXXX XXXX XXXX XXXX"}</div>
+
+                  <div className=" flex items-center justify-center">
+
+                    <span className="text-[0.7em] text-gray-400 leading-[1]">VALID <br /> THRU</span> <span className="text-md card-font ml-3" >{expiry || "MM/YY"}</span>
+                  </div>
+                  <div className=" flex">
+
+                    <span className="text-[0.7em] text-gray-400 leading-[1]">CARD <br /> HOLDER</span> <span className="text-md ml-3 card-font" >{cardName || "CARD HOLDER NAME"}</span>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
 
             {/* Back */}
-            <div className="card-back bg-gray-800">
-              <div className="mt-8 text-sm">CVV</div>
-              <div className="text-lg tracking-widest">{cvv || "•••"}</div>
+            <div className="card-back ">
+                    <div className=" flex items-center text-black h-full justify-center">
+
+                    <span className="mb-7" >CVV</span> <span className="text-3xl ml-3 mb-7 " >{cvv || "•••"}</span>
+                  </div>
+            
             </div>
           </div>
         </div>
@@ -37,8 +55,11 @@ const  CreditCardForm = ()=> {
             <label className="block text-sm font-medium">Card Number</label>
             <input
               type="text"
-              maxLength="19"
+              inputMode="numeric"      // Brings up number keypad on mobile
+              pattern="\d*"            // Restricts to digits
+              maxLength="19"           // Includes spaces (e.g., 1234 5678 9012 3456)
               className="w-full border px-3 py-2 rounded mt-1"
+              
               onChange={(e) =>
                 setCardNumber(
                   e.target.value
