@@ -85,7 +85,6 @@ const CreditCardForm = () => {
             </div>
           </div>
         </div>
- 
         {/* Form */}
         <form className="space-y-4 bg-white p-6 rounded-xl shadow-md">
           <div>
@@ -94,7 +93,7 @@ const CreditCardForm = () => {
               type="text"
               inputMode="numeric"      // Brings up number keypad on mobile
               pattern="\d*"            // Restricts to digits
-              maxLength="19"           // Includes spaces (e.g., 1234 5678 9012 3456)
+              maxLength="16"          
               className="w-full border px-3 py-2 rounded mt-1"
 
               onChange={handleCardNumberChange}
