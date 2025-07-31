@@ -1,26 +1,21 @@
 
-
-/* Custom flip effect classes */
-.perspective {
-  perspective: 1000px;
+.card-front{
+  background-image: url(../../assets/Images/credit-card-front.jpg) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 25px;
+  
+}
+.card-back{
+  background-image: url(../../assets/Images/credit-card-back.jpg) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 25px;
+  padding: 0;
 }
 
-.card-3d {
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-.card-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  @apply absolute w-full h-full rounded-xl shadow-xl p-6 text-white;
-  backface-visibility: hidden;
-}
-
-.card-back {
-  transform: rotateY(180deg);
+.card-font{
+  font-family: 'Orbitron', sans-serif;
 }
