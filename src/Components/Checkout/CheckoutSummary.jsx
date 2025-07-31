@@ -3,12 +3,11 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutSummary = ({ handleClose }) => {
+const CheckoutSummary = () => {
 
    const navigate = useNavigate()
 
    const handleCheckout = () => {
-      handleClose();
       navigate("/checkout");
    };
 
