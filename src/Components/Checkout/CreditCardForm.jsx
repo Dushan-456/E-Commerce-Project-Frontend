@@ -3,6 +3,7 @@ import "../../index.css";
 import "./CreditCardForm.css";
 import visa from '../../assets/Images/visa.png'
 import master from '../../assets/Images/master.png'
+import black from '../../assets/Images/black-card.png'
 
 const CreditCardForm = () => {
   const [cardNumber, setCardNumber] = useState("XXXX XXXX XXXX XXXX");
@@ -43,18 +44,24 @@ const CreditCardForm = () => {
                 <div className="flex-1/2 flex flex-col justify-between  ">
                   <div className="text-2xl card-font text-center  tracking-widest">{cardNumber || "XXXX XXXX XXXX XXXX"}</div>
 
-                  <div className=" flex items-center justify-end">
+                  <div className=" flex items-center justify-between">
+                    <div>
+                      <p></p>
+                    </div>
+                    <div>
 
                     <span className="text-[0.7em] text-gray-400 leading-[1]">VALID <br /> THRU</span> <span className="text-md card-font ml-3" >{expiry || "MM/YY"}</span>
+                    </div>
+
                     <img
                       src={
                         cardType === "Mastercard"
                           ? master
                           : cardType === "Visa"
                             ? visa
-                            : ""
+                            : black
                       }
-                      className="w-18 ml-20"
+                      style={{width:'80px' , height:'50px'}}
                       alt={cardType ? `${cardType} Card` : "Card Type"}
                     />
                   </div>
@@ -78,9 +85,7 @@ const CreditCardForm = () => {
             </div>
           </div>
         </div>
-        {cardType && (
-          <p className="mt-2 text-sm text-gray-600">Detected Card: {cardType}</p>
-        )}
+ 
         {/* Form */}
         <form className="space-y-4 bg-white p-6 rounded-xl shadow-md">
           <div>
