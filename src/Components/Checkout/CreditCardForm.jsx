@@ -1,13 +1,32 @@
 import { useState } from "react";
 import "../../index.css";
 import "./CreditCardForm.css";
+import visa from '../../assets/Images/visa.png'
+import master from '../../assets/Images/master.png'
 
 const CreditCardForm = () => {
   const [cardNumber, setCardNumber] = useState("XXXX XXXX XXXX XXXX");
+  const [cardType, setCardType] = useState("");
   const [cardName, setCardName] = useState("CARD HOLDER NAME");
   const [expiry, setExpiry] = useState("MM/YY");
   const [cvv, setCvv] = useState("XXX");
   const [isFlipped, setIsFlipped] = useState(false);
+
+
+  const handleCardNumberChange = (e) => {
+    const raw = e.target.value.replace(/\D/g, "");
+    const formatted = raw.replace(/(\d{4})(?=\d)/g, "$1 ").substring(0, 19);
+
+    setCardNumber(formatted);
+    setCardType(getCardType(raw));
+  };
+
+  const getCardType = (number) => {
+    if (number.startsWith("4")) return "Visa";
+    if (/^5[1-5]/.test(number)) return "Mastercard";
+    if (/^2(2[2-9]|[3-6]|7[01]|720)/.test(number)) return "Mastercard";
+    return "";
+  };
 
   return (
     <div className=" flex items-center justify-center p-6">
@@ -24,9 +43,20 @@ const CreditCardForm = () => {
                 <div className="flex-1/2 flex flex-col justify-between  ">
                   <div className="text-2xl card-font text-center  tracking-widest">{cardNumber || "XXXX XXXX XXXX XXXX"}</div>
 
-                  <div className=" flex items-center justify-center">
+                  <div className=" flex items-center justify-end">
 
                     <span className="text-[0.7em] text-gray-400 leading-[1]">VALID <br /> THRU</span> <span className="text-md card-font ml-3" >{expiry || "MM/YY"}</span>
+                    <img
+                      src={
+                        cardType === "Mastercard"
+                          ? master
+                          : cardType === "Visa"
+                            ? visa
+                            : ""
+                      }
+                      className="w-18 ml-20"
+                      alt={cardType ? `${cardType} Card` : "Card Type"}
+                    />
                   </div>
                   <div className=" flex">
 
@@ -40,15 +70,17 @@ const CreditCardForm = () => {
 
             {/* Back */}
             <div className="card-back ">
-                    <div className=" flex items-center text-black h-full justify-center">
+              <div className=" flex items-center text-black h-full justify-center">
 
-                    <span className="mb-7" >CVV</span> <span className="text-2xl ml-3 mb-7 " >{cvv || "•••"}</span>
-                  </div>
-            
+                <span className="mb-7" >CVV</span> <span className="text-2xl ml-3 mb-7 " >{cvv || "•••"}</span>
+              </div>
+
             </div>
           </div>
         </div>
-
+        {cardType && (
+          <p className="mt-2 text-sm text-gray-600">Detected Card: {cardType}</p>
+        )}
         {/* Form */}
         <form className="space-y-4 bg-white p-6 rounded-xl shadow-md">
           <div>
@@ -59,15 +91,9 @@ const CreditCardForm = () => {
               pattern="\d*"            // Restricts to digits
               maxLength="19"           // Includes spaces (e.g., 1234 5678 9012 3456)
               className="w-full border px-3 py-2 rounded mt-1"
-              
-              onChange={(e) =>
-                setCardNumber(
-                  e.target.value
-                    .replace(/\D/g, "")
-                    .replace(/(\d{4})(?=\d)/g, "$1 ")
-                    .substring(0, 19)
-                )
-              }
+
+              onChange={handleCardNumberChange}
+
               placeholder="1234 5678 9012 3456"
             />
           </div>
@@ -87,7 +113,7 @@ const CreditCardForm = () => {
               <label className="block text-sm font-medium">Expiry Date</label>
               <input
                 type="text"
-                maxLength="5" 
+                maxLength="5"
                 className="w-full border px-3 py-2 rounded mt-1"
                 onChange={(e) =>
                   setExpiry(
