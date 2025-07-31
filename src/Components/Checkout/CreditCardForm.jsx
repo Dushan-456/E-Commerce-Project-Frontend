@@ -42,7 +42,7 @@ const CreditCardForm = () => {
             <div className="card-back ">
                     <div className=" flex items-center text-black h-full justify-center">
 
-                    <span className="mb-7" >CVV</span> <span className="text-3xl ml-3 mb-7 " >{cvv || "•••"}</span>
+                    <span className="mb-7" >CVV</span> <span className="text-2xl ml-3 mb-7 " >{cvv || "•••"}</span>
                   </div>
             
             </div>
@@ -87,6 +87,7 @@ const CreditCardForm = () => {
               <label className="block text-sm font-medium">Expiry Date</label>
               <input
                 type="text"
+                maxLength="5" 
                 className="w-full border px-3 py-2 rounded mt-1"
                 onChange={(e) =>
                   setExpiry(
