@@ -49,6 +49,7 @@ const ShippingAddress = () => {
          <div>
             <div>
                <TextField
+                  required
                   label="Email"
                   type="email"
                   className="w-full !p-2"
@@ -61,6 +62,7 @@ const ShippingAddress = () => {
             </div>
             <TextField
                label="Name"
+               required
                className="w-1/2 !p-2"
                value={formData.name}
                onChange={handleChange("name")}
@@ -71,6 +73,7 @@ const ShippingAddress = () => {
 
             <TextField
                label="Contact Number"
+               required
                className="w-1/2 !p-2"
                value={formData.contact}
                onChange={handleChange("contact")}
@@ -85,6 +88,7 @@ const ShippingAddress = () => {
             <TextField
                label="Address Line 1"
                className="w-1/2 !p-2"
+               required
                value={formData.address_line1}
                onChange={handleChange("address_line1")}
                onBlur={handleBlur("address_line1")}
@@ -99,6 +103,7 @@ const ShippingAddress = () => {
             <div>
                <TextField
                   label="City"
+                  required
                   className="w-1/2 !p-2"
                   value={formData.city}
                   onChange={handleChange("city")}
@@ -110,6 +115,7 @@ const ShippingAddress = () => {
                   label="State"
                   className="w-1/2 !p-2"
                   value={formData.state}
+                  required
                   onChange={handleChange("state")}
                   onBlur={handleBlur("state")}
                   error={errors.state}
@@ -120,6 +126,7 @@ const ShippingAddress = () => {
                <TextField
                   label="Postal Code"
                   className="w-1/2 !p-2"
+                  required
                   value={formData.postalCode}
                   onChange={handleChange("postalCode")}
                   onBlur={handleBlur("postalCode")}
